@@ -1,0 +1,70 @@
+{
+  message: 'MongoDB Connected: ac-9v8myxj-shard-00-00.4aaua1q.mongodb.net',
+  level: 'info',
+  timestamp: '2023-11-27T18:45:32.792Z'
+}
+{
+  message: 'Server running on port 5050',
+  level: 'info',
+  timestamp: '2023-11-27T18:45:32.798Z'
+}
+{
+  message: 'MongoDB Connected: ac-9v8myxj-shard-00-00.4aaua1q.mongodb.net',
+  level: 'info',
+  timestamp: '2023-11-27T19:27:31.927Z'
+}
+{
+  message: 'Server running on port 5050',
+  level: 'info',
+  timestamp: '2023-11-27T19:27:31.935Z'
+}
+{
+  message: 'MongoDB Connected: ac-9v8myxj-shard-00-00.4aaua1q.mongodb.net',
+  level: 'info',
+  timestamp: '2023-11-27T22:14:30.397Z'
+}
+{
+  message: 'Server running on port 5050',
+  level: 'info',
+  timestamp: '2023-11-27T22:14:30.411Z'
+}
+{
+  message: 'MongoDB Connected: ac-9v8myxj-shard-00-00.4aaua1q.mongodb.net',
+  level: 'info',
+  timestamp: '2023-11-27T22:22:46.109Z'
+}
+{
+  message: 'Server running on port 5050',
+  level: 'info',
+  timestamp: '2023-11-27T22:22:46.114Z'
+}
+{
+  message: 'MongoDB Connected: ac-9v8myxj-shard-00-00.4aaua1q.mongodb.net',
+  level: 'info',
+  timestamp: '2023-11-27T22:24:01.886Z'
+}
+{
+  message: 'Server running on port 5050',
+  level: 'info',
+  timestamp: '2023-11-27T22:24:01.890Z'
+}
+{
+  message: 'MongoDB Connected: ac-9v8myxj-shard-00-00.4aaua1q.mongodb.net',
+  level: 'info',
+  timestamp: '2023-11-27T22:26:06.197Z'
+}
+{
+  message: 'Server running on port 5050',
+  level: 'info',
+  timestamp: '2023-11-27T22:26:06.201Z'
+}
+{
+  message: 'Server running on port 5050',
+  level: 'info',
+  timestamp: '2023-11-27T22:40:10.373Z'
+}
+{
+  message: 'Server running on port 5050',
+  level: 'info',
+  timestamp: '2023-11-27T22:40:14.660Z'
+}

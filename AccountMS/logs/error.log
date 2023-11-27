@@ -1,0 +1,10 @@
+{
+  message: 'Cast to ObjectId failed for value "undefined" (type string) at path "walletID" for model "Wallet"',
+  level: 'error',
+  timestamp: '2023-11-27T22:20:58.293Z'
+}
+{
+  message: 'Cast to ObjectId failed for value "undefined" (type string) at path "walletID" for model "Wallet"',
+  level: 'error',
+  timestamp: '2023-11-27T22:23:23.271Z'
+}

@@ -1,0 +1,70 @@
+{
+  message: 'MongoDB Connected: ac-9v8myxj-shard-00-00.4aaua1q.mongodb.net',
+  level: 'info',
+  timestamp: '2023-11-27T18:47:35.701Z'
+}
+{
+  message: 'Server running on port 5001',
+  level: 'info',
+  timestamp: '2023-11-27T18:47:35.716Z'
+}
+{
+  message: 'MongoDB Connected: ac-9v8myxj-shard-00-00.4aaua1q.mongodb.net',
+  level: 'info',
+  timestamp: '2023-11-27T22:15:09.473Z'
+}
+{
+  message: 'Server running on port 5001',
+  level: 'info',
+  timestamp: '2023-11-27T22:15:09.480Z'
+}
+{
+  message: 'MongoDB Connected: ac-9v8myxj-shard-00-00.4aaua1q.mongodb.net',
+  level: 'info',
+  timestamp: '2023-11-27T22:20:33.329Z'
+}
+{
+  message: 'Server running on port 5001',
+  level: 'info',
+  timestamp: '2023-11-27T22:20:33.332Z'
+}
+{
+  message: 'Cast to ObjectId failed for value "undefined" (type string) at path "walletID" for model "Wallet"',
+  level: 'error',
+  timestamp: '2023-11-27T22:20:58.293Z'
+}
+{
+  message: 'Cast to ObjectId failed for value "undefined" (type string) at path "walletID" for model "Wallet"',
+  level: 'error',
+  timestamp: '2023-11-27T22:23:23.271Z'
+}
+{
+  message: 'MongoDB Connected: ac-9v8myxj-shard-00-00.4aaua1q.mongodb.net',
+  level: 'info',
+  timestamp: '2023-11-27T22:33:43.853Z'
+}
+{
+  message: 'Server running on port 5001',
+  level: 'info',
+  timestamp: '2023-11-27T22:33:43.859Z'
+}
+{
+  message: 'MongoDB Connected: ac-9v8myxj-shard-00-00.4aaua1q.mongodb.net',
+  level: 'info',
+  timestamp: '2023-11-27T22:33:50.067Z'
+}
+{
+  message: 'Server running on port 5001',
+  level: 'info',
+  timestamp: '2023-11-27T22:33:50.072Z'
+}
+{
+  message: 'MongoDB Connected: ac-9v8myxj-shard-00-00.4aaua1q.mongodb.net',
+  level: 'info',
+  timestamp: '2023-11-27T22:39:01.223Z'
+}
+{
+  message: 'Server running on port 5001',
+  level: 'info',
+  timestamp: '2023-11-27T22:39:01.229Z'
+}

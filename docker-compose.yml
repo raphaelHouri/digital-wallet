@@ -1,0 +1,34 @@
+version: "3"
+services:
+  account-ms:
+    build:
+      context: ./AccountMS
+    ports:
+      - "5001:5001"
+    networks:
+      - paybox
+
+  transactions-ms:
+    build:
+      context: ./TransactionMS
+    ports:
+      - "5002:5002"
+    networks:
+      - paybox
+
+  client-ms:
+    build:
+      context: ./ClientMS
+    ports:
+      - "5050:5050"
+
+    networks:
+      - paybox
+
+
+networks:
+  paybox:
+# Example of how to use it:
+# docker-compose up kafka zookeeper
+# (Wait for Kafka and Zookeeper to start)
+# docker-compose up account-ms transactions-ms client-ms
