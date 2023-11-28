@@ -1,6 +1,4 @@
-# digital-wallet
-
-# Digital Wallet System
+# Digital Wallet
 
 ## Running the Project
 
@@ -15,6 +13,8 @@ To execute the project, follow these steps:
    ```bash
    docker-compose build && docker-compose up
    ```
+
+4. import "paybox - API documentation.postman_collection" file to postmen for having all the requests ready
 
 ## System Architecture
 
@@ -105,5 +105,3 @@ src
 ├── app.ts
 └── .env
 ```
-
-Adjustments and improvements to the README content can be made based on your specific project details and conventions.
