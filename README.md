@@ -17,7 +17,8 @@ To execute the project, follow these steps:
 4. import "paybox - API documentation.postman_collection" file to postmen for having all the requests ready
 
 ## System Architecture
-<img width="555" alt="image" src="https://github.com/raphaelHouri/digital-wallet/assets/58934116/c026cf9f-246e-414f-97c5-9d6d7d90f2ff">
+<img width="544" alt="image" src="https://github.com/raphaelHouri/digital-wallet/assets/58934116/ece63270-3445-4d74-a7c6-b4cff7b56077">
+
 
 
 ### Microservices
