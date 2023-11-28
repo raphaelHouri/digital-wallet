@@ -14,10 +14,11 @@ To execute the project, follow these steps:
    docker-compose build && docker-compose up
    ```
 
-4. import "paybox - API documentation.postman_collection" file to postmen for having all the requests ready
+4. import "paybox - API documentation.postman_collection" file to Postmen for having all the requests ready
 
 ## System Architecture
-<img width="544" alt="image" src="https://github.com/raphaelHouri/digital-wallet/assets/58934116/ece63270-3445-4d74-a7c6-b4cff7b56077">
+<img width="552" alt="image" src="https://github.com/raphaelHouri/digital-wallet/assets/58934116/59d855d3-103b-476f-9933-e6b9dd4e1d87">
+
 
 
 
