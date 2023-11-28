@@ -28,7 +28,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5001/api/v1/user/6562fbf63e09f779d5253e18",
+							"raw": "http://localhost:5001/api/v1/user/6562fbf63e09f779d5253e17",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -38,7 +38,7 @@
 								"api",
 								"v1",
 								"user",
-								"6562fbf63e09f779d5253e18"
+								"6562fbf63e09f779d5253e17"
 							],
 							"query": [
 								{
@@ -372,12 +372,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5050/api/v1/transactions",
+							"raw": "http://localhost:5002/api/v1/transactions",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5050",
+							"port": "5002",
 							"path": [
 								"api",
 								"v1",
@@ -391,7 +391,30 @@
 					"name": "Execute transaction",
 					"request": {
 						"method": "POST",
-						"header": []
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": \"6562fbf63e09f779d5253e17\", // Replace with a valid ObjectId for a user\r\n  \"amount\": 1,\r\n  \"currency\": \"ils\",\r\n  \"status\": \"pending\",\r\n  \"fromWalletId\": \"6562fbf93e09f779d5253e1e\", // Replace with a valid ObjectId for the wallet\r\n  \"toWalletId\": \"6562fbf93e09f779d5253ee1\" // Replace with a valid ObjectId for the wallet\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5002/api/v1/transactions/execute",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"v1",
+								"transactions",
+								"execute"
+							]
+						}
 					},
 					"response": []
 				}
@@ -424,18 +447,20 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\n}"
+							"raw": "{\n  \"userId\": \"6562fbf63e09f779d5253e17\", // Replace with a valid ObjectId for a user\n  \"amount\": 3,\n  \"currency\": \"ils\",\n  \"status\": \"pending\",\n  \"fromWalletId\": \"6562fbf93e09f779d5253e1e\", // Replace with a valid ObjectId for the wallet\n  \"toWalletId\": \"6562fbf93e09f779d5253ee1\" // Replace with a valid ObjectId for the wallet\n}"
 						},
 						"url": {
-							"raw": "https://api.getpostman.com/transactions",
-							"protocol": "https",
+							"raw": "http://localhost:5050/api/v1/transactions/execute",
+							"protocol": "http",
 							"host": [
-								"api",
-								"getpostman",
-								"com"
+								"localhost"
 							],
+							"port": "5050",
 							"path": [
-								"transactions"
+								"api",
+								"v1",
+								"transactions",
+								"execute"
 							],
 							"query": [
 								{
@@ -689,7 +714,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5050/api/v1/user/6562fbf63e09f779d5252e17",
+							"raw": "http://localhost:5050/api/v1/user/6562fbf63e09f779d5253e17",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -699,7 +724,7 @@
 								"api",
 								"v1",
 								"user",
-								"6562fbf63e09f779d5252e17"
+								"6562fbf63e09f779d5253e17"
 							],
 							"query": [
 								{
@@ -861,7 +886,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5050/api/v1/wallet/6562fbf93e09f779d5253e1e",
+							"raw": "http://localhost:5050/api/v1/wallet/deposit/6562fbf93e09f779d5253ee1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -871,15 +896,8 @@
 								"api",
 								"v1",
 								"wallet",
-								"6562fbf93e09f779d5253e1e"
-							],
-							"query": [
-								{
-									"key": "workspace",
-									"value": "{{workspaceId}}",
-									"description": "Optional. A workspace ID.",
-									"disabled": true
-								}
+								"deposit",
+								"6562fbf93e09f779d5253ee1"
 							]
 						},
 						"description": "Gets all of your [collections](https://www.getpostman.com/docs/collections). The response includes all of your subscribed collections."
@@ -1019,10 +1037,15 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"transactionType\": \"all\",\r\n  \"startDate\": \"2023-03-01T00:00:00.000Z\",\r\n  \"endDate\": \"2023-11-28T13:55:48.831Z\",\r\n  \"page\": 1,\r\n  \"limit\": 10,\r\n  \"walletID\": \"6562fbf93e09f779d5253e1e\"\r\n}"
+							"raw": "{\r\n  \"transactionType\": \"all\",\r\n  \"startDate\": \"2023-03-01T00:00:00.000Z\",\r\n  \"endDate\": \"2023-11-28T13:55:48.831Z\",\r\n  \"page\": 1,\r\n  \"limit\": 10,\r\n  \"walletID\": \"6562fbf93e09f779d5253e1e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
-							"raw": "http://localhost:5050/api/v1/transactions?transactionType=all&userId=6562fbf63e09f779d5253e17&startDate=2023-03-01T00:00:00.000Z&endDate=2023-11-28T13:55:48.831Z&page=1&limit=10",
+							"raw": "http://localhost:5050/api/v1/transactions",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1032,32 +1055,6 @@
 								"api",
 								"v1",
 								"transactions"
-							],
-							"query": [
-								{
-									"key": "transactionType",
-									"value": "all"
-								},
-								{
-									"key": "userId",
-									"value": "6562fbf63e09f779d5253e17"
-								},
-								{
-									"key": "startDate",
-									"value": "2023-03-01T00:00:00.000Z"
-								},
-								{
-									"key": "endDate",
-									"value": "2023-11-28T13:55:48.831Z"
-								},
-								{
-									"key": "page",
-									"value": "1"
-								},
-								{
-									"key": "limit",
-									"value": "10"
-								}
 							]
 						}
 					},
