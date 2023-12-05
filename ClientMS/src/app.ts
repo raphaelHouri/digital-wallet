@@ -2,16 +2,10 @@ import express from "express";
 // import KafkaClient from "./config/kafka";
 import logger from "./utils/logger";
 import router from "./routes/client.route";
+import { AppConfig } from "./utils/common_interfaces";
 require("dotenv").config();
 
-interface AppConfig {
-  app: { port: number | string };
-  msUrls: {
-    accountMS: string;
-    transactionMS: string;
-    notificationMS: string;
-  };
-}
+
 
 // Express app
 const app = express();
@@ -21,7 +15,6 @@ export const appConfig: AppConfig = {
   msUrls: {
     accountMS: process.env.ACCOUNT_MS_URI || "",
     transactionMS: process.env.TRANSACTION_MS_URI || "",
-    notificationMS: process.env.NOTIFICATION_MS_URI || "",
   },
 };
 
@@ -33,8 +26,6 @@ app.get("/health", (req, res) => {
 app.use("/api/v1/", router);
 // Start server
 app.listen(appConfig.app.port, async () => {
-
-
   logger.info(`Server running on port ${appConfig.app.port}`);
 });
 

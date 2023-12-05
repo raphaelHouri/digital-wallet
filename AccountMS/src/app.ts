@@ -1,18 +1,10 @@
 import express from "express";
 import logger from "./utils/logger";
-import MongoConnection, { MongoDbConfig } from "./config/db";
+import MongoConnection from "./config/db";
 import router from "./routes/account.route";
+import { AppConfig } from "./utils/common_interfaces";
 require("dotenv").config();
 
-interface AppConfig {
-  mongo: MongoDbConfig;
-  app: { port: number | string };
-  msUrls: {
-    accountMS: string;
-    transactionMS: string;
-    notificationMS: string;
-  };
-}
 
 // Express app
 const app = express();
@@ -23,14 +15,8 @@ export const appConfig: AppConfig = {
     options: {},
   },
   app: { port: process.env.PORT || 3000 },
-  msUrls: {
-    accountMS: process.env.ACCOUNT_MS_URI || "",
-    transactionMS: process.env.TRANSACTION_MS_URI || "",
-    notificationMS: process.env.NOTIFICATION_MS_URI || "",
-  },
 };
 
-// Init mongo and kafka clients
 const mongo = new MongoConnection();
 
 app.use(express.json());
@@ -44,8 +30,6 @@ app.listen(appConfig.app.port, async () => {
   if (appConfig.mongo.uri) {
     await mongo.init(appConfig.mongo);
   }
-
-
   logger.info(`Server running on port ${appConfig.app.port}`);
 });
 

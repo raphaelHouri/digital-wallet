@@ -1,5 +1,16 @@
 import { Document, Types } from "mongoose";
 
+
+export interface AppConfig {
+  app: { port: number | string };
+  msUrls: {
+    accountMS: string;
+    transactionMS: string;
+  };
+}
+
+// DATABASE SCHEMA INTERFACES
+
 export interface IUser extends Document {
   userID: string;
   mail: string;
@@ -15,7 +26,7 @@ export interface ITransaction extends Document {
   userId: string;
   amount: number;
   transactionId: string;
-  status: "pending" | "success" | "rejected";
+  status: TransactionStatus
   dateCreated: Date;
   lastUpdateDate?: Date;
   fromWalletId: string;
@@ -45,10 +56,12 @@ export interface INotification extends Document {
   createdAt: Date;
 }
 
-// request interfaces
+export type TransactionStatus = "pending" | "success" | "rejected";
+
+// REQUEST INTERFACES
 
 export interface TransactionsQuery {
-  transactionType: "sent" | "received" | "all";
+  transactionType: TransactionType
   walletID: string;
   startDate: string;
   endDate: string;
@@ -57,10 +70,12 @@ export interface TransactionsQuery {
 }
 
 export interface TransactionBody {
-  userId: string; 
+  userId: string;
   amount: number;
   currency: string;
   status: string;
   fromWalletId: string;
-  toWalletId: string; 
+  toWalletId: string;
 }
+
+export type TransactionType = "sent" | "received" | "all";

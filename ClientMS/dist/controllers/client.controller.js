@@ -6,11 +6,11 @@ const app_1 = require("../app");
 const request_utils_1 = require("../utils/request_utils");
 class ClientController {
     static async getUserById(req, res) {
-        const url = `${app_1.appConfig.msUrls.accountMS}api/v1/user/${req.params.userId}`;
+        const url = `${app_1.appConfig.msUrls.accountMS}api/v1/users/${req.params.userId}`;
         await (0, request_utils_1.fetcher)(res, url, "GET");
     }
     static async getWalletDeposit(req, res) {
-        const url = `${app_1.appConfig.msUrls.accountMS}api/v1/wallet/${req.params.userId}`;
+        const url = `${app_1.appConfig.msUrls.accountMS}api/v1/wallets/${req.params.walletId}`;
         await (0, request_utils_1.fetcher)(res, url, "GET");
     }
     static async getTransactions(req, res) {

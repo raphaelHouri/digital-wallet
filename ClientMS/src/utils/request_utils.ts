@@ -34,10 +34,11 @@ export async function fetcher(
             res.status(500).json({ error: "Internal Server Error" });
         }
     } catch (error) {
-        console.log(error)
         if (error instanceof AxiosError) {
             const err = error as AxiosError;
-            res.status(err.response?.status || 500).json({ error: err.response?.data });
+            if (err.response?.data) reportError({ message: getErrorMessage(err.response?.data) });
+            else if (err.message) reportError({ message: err.message });;
+            res.status(err.response?.status || 500).json({ error: err.response?.data || "Internal Server Error" });
         } else {
             reportError({ message: getErrorMessage(error) });
             res.status(500).json({ error: "Internal Server Error" });

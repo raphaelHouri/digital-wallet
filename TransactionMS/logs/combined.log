@@ -3229,3 +3229,38 @@
   level: 'info',
   timestamp: '2023-11-27T22:53:56.855Z'
 }
+{
+  message: 'MongoDB Connected: ac-9v8myxj-shard-00-00.4aaua1q.mongodb.net',
+  level: 'info',
+  timestamp: '2023-12-05T08:24:47.382Z'
+}
+{
+  message: 'Server running on port 5002',
+  level: 'info',
+  timestamp: '2023-12-05T08:24:47.392Z'
+}
+{
+  message: '{"Details":{"userId":"6562fbf63e09f779d5253e17","amount":1,"currency":"ils","status":"pending","fromWalletId":"6562fbf93e09f779d5253e1e","toWalletId":"6562fbf93e09f779d5253ee1"},"status":"success","message":"Transaction Successful: The transaction has been completed successfully."}',
+  level: 'info',
+  timestamp: '2023-12-05T08:25:07.996Z'
+}
+{
+  message: '{"Details":{"userId":"6562fbf63e09f779d5253e17","amount":1,"currency":"ils","status":"pending","fromWalletId":"6562fbf93e09f779d5253e1e","toWalletId":"6562fbf93e09f779d5253ee1"},"status":"success","message":"Transaction Successful: The transaction has been completed successfully."}',
+  level: 'info',
+  timestamp: '2023-12-05T08:26:36.639Z'
+}
+{
+  message: '{"Details":{"userId":"6562fbf63e09f779d5253e17","amount":10000,"currency":"ils","status":"pending","fromWalletId":"6562fbf93e09f779d5253e1e","toWalletId":"6562fbf93e09f779d5253ee1"},"status":"rejected","message":"Transaction Failed: Insufficient Balance in Your Account. Please ensure that your account has enough funds to complete the transaction."}',
+  level: 'info',
+  timestamp: '2023-12-05T08:27:23.719Z'
+}
+{
+  message: '{"Details":{"userId":"6562fbf63e09f779d5253e17","amount":3,"currency":"ils","status":"pending","fromWalletId":"6562fbf93e09f779d5253e1e","toWalletId":"6562fbf93e09f779d5253ee1"},"status":"success","message":"Transaction Successful: The transaction has been completed successfully."}',
+  level: 'info',
+  timestamp: '2023-12-05T08:28:26.146Z'
+}
+{
+  message: '{"Details":{"userId":"6562fbf63e09f779d5253e17","amount":30000,"currency":"ils","status":"pending","fromWalletId":"6562fbf93e09f779d5253e1e","toWalletId":"6562fbf93e09f779d5253ee1"},"status":"rejected","message":"Transaction Failed: Insufficient Balance in Your Account. Please ensure that your account has enough funds to complete the transaction."}',
+  level: 'info',
+  timestamp: '2023-12-05T08:29:40.391Z'
+}

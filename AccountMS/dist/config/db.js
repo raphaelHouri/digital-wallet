@@ -9,7 +9,7 @@ class MongoConnection {
     constructor() { }
     async init(config) {
         if (!config.uri) {
-            throw new Error('MongoDB URI not defined');
+            throw new Error("MongoDB URI not defined");
         }
         try {
             const conn = await mongoose_1.default.connect(config.uri, config.options);

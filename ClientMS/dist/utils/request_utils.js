@@ -41,11 +41,22 @@ async function fetcher(res, url, method, body = null, params = null) {
         if (result.status === 404) {
             res.status(404).json(result.message);
         }
+        else if (result.status === 400) {
+            res.status(400).json(result.message);
+        }
+        else if (result.status === 500) {
+            res.status(500).json(result.message);
+        }
+        else {
+            res.status(500).json({ error: "Internal Server Error" });
+        }
     }
     catch (error) {
         console.log(error);
         if (error instanceof axios_1.AxiosError) {
             const err = error;
+            if (err.response?.data)
+                (0, error_utils_1.reportError)({ message: (0, error_utils_1.getErrorMessage)(err.response?.data) });
             res.status(err.response?.status || 500).json({ error: err.response?.data });
         }
         else {
