@@ -10,11 +10,8 @@ class MongoConnection {
   public constructor() {}
 
   public async init(config: MongoDbConfig) {
-    if (!config.uri) {
-      throw new Error("MongoDB URI not defined");
-    }
-
     try {
+      if (!config.uri) throw new Error("MongoDB URI not defined");
       const conn = await mongoose.connect(config.uri, config.options);
       logger.info(`MongoDB Connected: ${conn.connection.host}`);
     } catch (error) {
