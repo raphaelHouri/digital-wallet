@@ -134,12 +134,12 @@ export class TransactionsController {
   }
 
 
-  public static async executeTransaction(    
+  public static async executeTransaction(
     req: Request,
     res: Response
   ): Promise<void> {
     try {
-      let status: NotificationStatus = "success"
+      let status: NotificationStatus = "rejected"
       let notificationMessage = ""
       const transactionDetails = req.body
       const fromWallet = await TransactionsController.getWalletById(
@@ -148,7 +148,6 @@ export class TransactionsController {
       const currency: Currency = transactionDetails.currency;
       // validate the transaction
       if (fromWallet.balance[currency] < transactionDetails.amount) {
-        status = "rejected"
         notificationMessage = "Transaction Failed: Insufficient Balance in Your Account. Please ensure that your account has enough funds to complete the transaction."
         sendNotification(transactionDetails, status, notificationMessage);
         NotificationModel.create({ ...transactionDetails, status: status, message: notificationMessage })
@@ -156,7 +155,6 @@ export class TransactionsController {
         return;
       }
       if (transactionDetails.amount < 0) {
-        status = "rejected"
         notificationMessage = "Transaction Failed: The transaction amount must e positive number"
         sendNotification(transactionDetails, status, notificationMessage);
         NotificationModel.create({ ...transactionDetails, status: status, message: notificationMessage })

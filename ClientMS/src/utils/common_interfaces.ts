@@ -56,7 +56,7 @@ export interface INotification extends Document {
   createdAt: Date;
 }
 
-export type TransactionStatus = "pending" | "success" | "rejected";
+export type TransactionStatus = "pending" | "pending-approval" | "success" | "rejected";
 
 // REQUEST INTERFACES
 
