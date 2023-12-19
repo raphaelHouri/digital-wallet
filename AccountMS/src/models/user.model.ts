@@ -9,7 +9,7 @@ const userSchema = new Schema({
   joinedAt: { type: Date, default: Date.now },
   phoneNumber: { type: String },
   singleWalletID: { type: Schema.Types.ObjectId, default: new Types.ObjectId, unique: true, required: true },
-  groupedWalletIDs: [{ type: Schema.Types.ObjectId, default: new Types.ObjectId, unique: true}],
+  groupedWalletIDs: [{ type: Schema.Types.ObjectId, unique: true }],
 });
 
 export const UserModel = model<IUser>("User", userSchema);
