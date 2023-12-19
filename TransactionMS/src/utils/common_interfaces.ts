@@ -70,7 +70,7 @@ export interface TransactionBody {
   userId: string; 
   amount: number;
   currency: Currency;
-  status: string;
+  status: TransactionStatus;
   fromWalletId: string; 
   toWalletId: string; 
 }
